@@ -29,9 +29,12 @@ struct PushedToSide: View {
 
 struct CustomBackGroundView<Content: View>: View {
     @ViewBuilder var content: () -> Content
+    @Environment(\.colorScheme) var colorScheme
+    var color: Color { colorScheme == .dark ? .white : .black }
+    
     var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
+            color.edgesIgnoringSafeArea(.all)
             content()
         }
     }
