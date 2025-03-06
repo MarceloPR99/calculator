@@ -10,14 +10,17 @@ import SwiftUI
 
 struct PushedToSide: View {
     @Binding var text: String
-    
+    @Environment(\.colorScheme) var colorScheme
+    var color: Color { colorScheme == .dark ? .black : .white }
+
     var body: some View {
         HStack {
             Spacer()
             Text(text)
+                .minimumScaleFactor(0.3)
                 .bold()
                 .font(.system(size: 80))
-                .foregroundColor(.white)
+                .foregroundColor(color)
                 .lineLimit(1)
         }
         .padding()
