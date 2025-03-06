@@ -31,7 +31,3 @@ struct CalculadoraView: View {
         })
     }
 }
-
-#Preview {
-    ContentView()
-}
