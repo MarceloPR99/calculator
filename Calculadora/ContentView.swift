@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CalculadoraView: View {
     @ObservedObject var viewModel = ViewModel()
     
     var body: some View {
