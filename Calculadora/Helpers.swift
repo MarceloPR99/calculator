@@ -62,10 +62,7 @@ struct CustomButton: View {
         Button(action: action) {
             Text(text)
                 .font(.system(size: 32))
-                .frame(
-                    width: buttonWidth,
-                    height: buttonHeight
-                )
+                .frame(width: buttonWidth, height: buttonHeight)
                 .background(buttonColor)
                 .foregroundColor(.white)
                 .cornerRadius(buttonWidth / 2)
